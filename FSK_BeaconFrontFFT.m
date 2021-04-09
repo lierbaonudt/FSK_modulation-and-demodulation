@@ -18,10 +18,11 @@ receivedSignalTip   = SymbolBeacon;
 receivedSignalRing  = [SymbolBeaconRing,SymbolBeaconRingBlak,...
                                 SymbolBeaconRingBlak,SymbolBeaconRingBlak];
 receivedSignalFront = receivedSignalTip + receivedSignalRing;
+%receivedSignalFront = receivedSignalTip;
 tS                  = (0:length(SymbolBeacon)-1)*1/Fs;     %t symbol
 tR                  = (0:length(receivedSignalFront)-1)*1/Fs; %t received frame
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-Nfft                = 128;
+Nfft                = 256;
 dF                  = Fs/Nfft;
 fVectors            = (0:(Nfft-1))*dF;
 tVectors            = (0:(Nfft-1))*1/Fs;
@@ -30,14 +31,17 @@ yAbs                = abs(FFTresult);
 yPhase              = imag(FFTresult);
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 subplot(3,1,1);
-stem(tVectors,receivedSignalFront(1:Nfft),':diamondr');
+%stem(tVectors,receivedSignalFront(1:Nfft),':diamondr');
+plot(tVectors,receivedSignalFront(1:Nfft),'k');
 title('Beacon LF mixed signal: Tip + Ring = Front'); 
 %axis([0 1*10^6 0 Nfft]);
 subplot(3,1,2);
-stem(fVectors,yAbs,'filled');
+%stem(fVectors,yAbs,'filled');
+plot(fVectors,yAbs,'k');
 title('Fourier transform. Abs.'); 
 axis([0 Fs 0 Nfft]);
 subplot(3,1,3);
-stem(fVectors,yPhase,'filled');
+%stem(fVectors,yPhase,'filled');
+plot(fVectors,yPhase,'k');
 title('Fourier transform. Abs.'); 
 axis([0 Fs -Nfft Nfft]);

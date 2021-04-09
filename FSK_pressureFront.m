@@ -23,17 +23,17 @@ receivePreFront     = receivedPreTip + receivedPreRing;
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 figure(1)
 subplot(3,1,1);
-plot(tS,receivedPreTip)
+plot(tS,receivedPreTip,'k')
 xlabel("1 0 0 1 0 1 1 0 from TIP");
 axis([-20*1/Fs 500*1/Fs -4 4]);
 %%%%%%%%%%%%%%%
 subplot(3,1,2);
-plot(tS,receivedPreRing)
+plot(tS,receivedPreRing,'k')
 xlabel("1 0 1 1 0 0 1 0 from RING");
 axis([-20*1/Fs 500*1/Fs -4 4]);
 %%%%%%%%%%%%%%%
 subplot(3,1,3);
-plot(tS,receivePreFront)
+plot(tS,receivePreFront,'k')
 xlabel("16'b. of FRONT");
 axis([-20*1/Fs 500*1/Fs -4 4]);
 

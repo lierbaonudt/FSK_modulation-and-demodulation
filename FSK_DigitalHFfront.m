@@ -52,18 +52,18 @@ axis([-20*1/Fs 500*1/Fs -4 4]);
 figure(2)
 subplot(3,1,1);
 %stem(tR,receivedSignalTip,':diamondr')
-plot(tR,receivedSignalTip)
+plot(tR,receivedSignalTip,'k')
 xlabel("1 0 0 1 0 1 1 0 from TIP");
 axis([-20*1/Fs 500*1/Fs -4 4]);
 %%%%%%%%%%%%%%%
 subplot(3,1,2);
 %stem(tR,receivedSignalRing,':diamondr')
-plot(tR,receivedSignalRing)
+plot(tR,receivedSignalRing,'k')
 xlabel("1 0 1 1 0 0 1 0 from RING");
 axis([-20*1/Fs 500*1/Fs -4 4]);
 %%%%%%%%%%%%%%%
 subplot(3,1,3);
 %stem(tR,receivedSignalMixed,':diamondr')
-plot(tR,receivedSignalMixed)
+plot(tR,receivedSignalMixed,'k')
 xlabel("16'b. of FRONT");
 axis([-20*1/Fs 500*1/Fs -4 4]);

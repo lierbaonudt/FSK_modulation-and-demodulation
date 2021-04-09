@@ -5,7 +5,7 @@ close all;
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 Fs                  =  1000000;                 % Sampling freq
 fP                  =  20000;                   % Base freq
-sps                 =  400;                     % # samples per symbol
+sps                 =  1281;                     % # samples per symbol
 ns                  =  0:(sps-1);               % Samples vectors
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 SymbolPressure1     =  sin(2*pi*ns*(fP+1*20)/Fs);
@@ -526,9 +526,9 @@ tS,SymbolPressure254,...
 tS,SymbolPressure255,...
 tS,SymbolPressure256)
 xlabel("256 pressure level.");
-axis([-20*1/Fs 500*1/Fs -2 2]);
+%axis([-20*1/Fs 500*1/Fs -2 2]);
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-Nfft                = 400;
+Nfft                = 1281;
 dF                  = Fs/Nfft;
 fVectors            = (0:(Nfft-1))*dF;
 tVectors            = (0:(Nfft-1))*1/Fs;
@@ -1560,7 +1560,7 @@ tVectors,SymbolPressure254(1:Nfft),...
 tVectors,SymbolPressure255(1:Nfft),...
 tVectors,SymbolPressure256(1:Nfft));
 title('256 pressure level.'); 
-axis([-20*1/Fs 500*1/Fs -2 2]);
+%axis([-20*1/Fs 500*1/Fs -2 2]);
 %%%%%%%%%%%%%%
 subplot(3,1,2);
 plot(fVectors,yAbs1,...
@@ -2079,4 +2079,4 @@ fVectors,yPhase254,...
 fVectors,yPhase255,...
 fVectors,yPhase256);
 title('Fourier transform. Abs.'); 
-axis([0 Fs -Nfft Nfft]);
+%axis([0 Fs -Nfft Nfft]);

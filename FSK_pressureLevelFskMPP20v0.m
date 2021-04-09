@@ -24,17 +24,17 @@ yAbs1               = abs(FFTresult1/Nfft);
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 figure(1)
 subplot(3,1,1);
-stem(tS,SymbolPressure1,':diamondr');
+plot(tS,SymbolPressure1,'k');
 xlabel("256 pressure level.");
 %axis([0 Nfft*1/Fs -2 2]);
 %%%%%%%%%%%%%%
 subplot(3,1,2);
-stem(tVectors,SymbolPressure1(1:Nfft),':diamondr');
+plot(tVectors,SymbolPressure1(1:Nfft),'k');
 xlabel("256 pressure level.");
 %axis([0 Nfft*1/Fs -2 2]);
 %%%%%%%%%%%%%%
 subplot(3,1,3);
-stem(fVectors,yAbs1);
+plot(fVectors,yAbs1,'k');
 title('Fourier transform. Abs.'); 
 %axis([0 Fs 0 Nfft/2]);
 %%%%%%%%%%%%%%
@@ -55,7 +55,7 @@ tSnew               = (0:length(SymbolNew)-1)*dtnew;  %t received symbol
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 figure(2)
 subplot(3,1,1);
-stem(tSnew,SymbolNew,':diamondr');
+plot(tSnew,SymbolNew,'k');
 xlabel("256 pressure level.");
 %axis([0 Nfft*1/Fsnew -2 2]);
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -74,12 +74,12 @@ yAbs1new            = abs(FFTresult1new);
 %yPhase1new          = imag(FFTresult1new);
 %%%%%%%%%%%%%%
 subplot(3,1,2);
-stem(tVectorsnew,SymbolNew,':diamondr');
+plot(tVectorsnew,SymbolNew,'k');
 xlabel("256 pressure level.");
 %axis([0 Nfftnew*dtnew -2 2]);
 %%%%%%%%%%%%%%
 subplot(3,1,3);
-stem(fVectorsnew,yAbs1new);
+plot(fVectorsnew,yAbs1new,'k');
 title('Fourier transform. Abs.'); 
 %axis([0 Fsnew 0 Nfftnew/64]);
 %%%%%%%%%%%%%%

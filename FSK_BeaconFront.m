@@ -39,7 +39,7 @@ axis([-20*1/Fs 500*1/Fs -4 4]);
 %%%%%%%%%%%%%%%
 figure(2)
 subplot(3,1,1);
-plot(tS,receivedSignalTip)
+plot(tS,receivedSignalTip,'k')
 xlabel("Symbol of beacon tip.");
 axis([-20*1/Fs 500*1/Fs -2 2]);
 %%%%%%%%%%%%%%%

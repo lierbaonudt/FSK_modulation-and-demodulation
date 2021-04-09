@@ -43,41 +43,52 @@ figure(1)
 tRx            = (0:length(receivedSignal)-1)*1/Fs;
 
 subplot(4,2,1);
-stem(tRx,receivedSignal,':diamondr')
+%stem(tRx,receivedSignal,':diamondr')
+plot(tRx,receivedSignal,'k')
 xlabel("Received signal: 1 0 0 1 0 1 1 0.");
-axis([0*1/Fs 400*1/Fs -2 2]);
+%axis([0*1/Fs 400*1/Fs -2 2]);
+axis([-100*1/Fs 500*1/Fs -2 2]);
 
 subplot(4,2,2);
-stem(tRx,receivedSignal,':diamondr')
+%stem(tRx,receivedSignal,':diamondr')
+plot(tRx,receivedSignal,'k')
 xlabel("Received signal: 1 0 0 1 0 1 1 0.");
-axis([0*1/Fs 400*1/Fs -2 2]);
+%axis([0*1/Fs 400*1/Fs -2 2]);
+axis([-100*1/Fs 500*1/Fs -2 2]);
 
 subplot(4,2,3);
-stem(tRx,receivedAllZeros,':diamondr')
+%stem(tRx,receivedAllZeros,':diamondr')
+plot(tRx,receivedAllZeros,'k')
 xlabel("All frequency Zeros symbols: 0 0 0 0 0 0 0 0.");
-axis([0*1/Fs 400*1/Fs -2 2]);
+%axis([0*1/Fs 400*1/Fs -2 2]);
+axis([-100*1/Fs 500*1/Fs -2 2]);
 
 subplot(4,2,4);
-stem(tRx,receivedAllOnes,':diamondr')
+plot(tRx,receivedAllOnes,'k')
 xlabel("All frequency Ones symbols: 1 1 1 1 1 1 1 1.");
-axis([0*1/Fs 400*1/Fs -2 2]);
+%axis([0*1/Fs 400*1/Fs -2 2]);
+axis([-100*1/Fs 500*1/Fs -2 2]);
 
 subplot(4,2,5);
-stem(tRx,DecodingZero,':diamondr')
+plot(tRx,DecodingZero,'k')
 xlabel("Decoding Zero symbols.");
-axis([0*1/Fs 400*1/Fs -2 2]);
+%axis([0*1/Fs 400*1/Fs -2 2]);
+axis([-100*1/Fs 500*1/Fs -2 2]);
 
 subplot(4,2,6);
-stem(tRx,DecodingOne,':diamondr')
+plot(tRx,DecodingOne,'k')
 xlabel("Decoding One symbols.");
-axis([0*1/Fs 400*1/Fs -2 2]);
+%axis([0*1/Fs 400*1/Fs -2 2]);
+axis([-100*1/Fs 500*1/Fs -2 2]);
 
 subplot(4,2,7);
-stem(tRx,SymbolOffsets_Zero,':diamondr')
+plot(tRx,SymbolOffsets_Zero,'k')
 xlabel("Each symbol mean calculation: decoding zeros symbols.");
-axis([0*1/Fs 400*1/Fs -2 2]);
+%axis([0*1/Fs 400*1/Fs -2 2]);
+axis([-100*1/Fs 500*1/Fs -2 2]);
 
 subplot(4,2,8);
-stem(tRx,SymbolOffsets_One,':diamondr')
+plot(tRx,SymbolOffsets_One,'k')
 xlabel("Each symbol mean calculation: decoding ones symbols.");
-axis([0*1/Fs 400*1/Fs -2 2]);
+%axis([0*1/Fs 400*1/Fs -2 2]);
+axis([-100*1/Fs 500*1/Fs -2 2]);
